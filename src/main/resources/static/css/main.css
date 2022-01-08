@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.topMenu div{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	color: #191919;
+	line-height: 1.43;
+}
