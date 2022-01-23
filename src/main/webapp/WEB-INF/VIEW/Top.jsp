@@ -23,16 +23,16 @@
 	
 	<div class="menu">
 		<ul>
-			<li><span>MusicTree</span>차트</li>
-			<li>
+			<li class="chart" onclick="location.href='/chart';"><span>MusicTree</span>차트</li>
+			<li class="music">
 				최신음악
 				<ul class="Mmenu rlist">
-					<li>최신 곡</li>
-					<li>최신 앨범</li>
+					<li onclick="location.href='/music/music';">최신 곡</li>
+					<li onclick="location.href='/music/album';">최신 앨범</li>
 					<li>최신 뮤직비디오</li>
 				</ul>
 			</li>
-			<li>
+			<li class="genre">
 				장르
 				<ul class="Mmenu glist">
 					<li>발라드</li>
@@ -43,14 +43,14 @@
 					<li>POP</li>
 				</ul>
 			</li>
-			<li>
+			<li class="playlist">
 				플레이리스트
 				<ul class="Mmenu playlist">
 					<li>인기 플레이리스트</li>
 					<li>최신 플레이리스트</li>
 				</ul>	
 			</li>
-			<li>아티스트</li>
+			<li class="artist">아티스트</li>
 		</ul>
 	</div>
 	
@@ -58,15 +58,14 @@
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
 	<script>
-		$(document).ready(function(){
-			$(".menu ul li").on('mouseenter',function(){
-				var index = $('.menu ul li').index(this);
-				
-				$(".menu ul li:eq("+ index +") .Mmenu").show();
-			})
+		 $(document).ready(function(){
+			console.log(window.location.pathname);
 			
-			$(".menu ul li").on('mouseout',function(){
-				$(".Mmenu").hide();
-			})
-		})
+			var path = window.location.pathname.split('/')[1];
+			
+			if(path != ''){
+				$(".menu ul li").removeClass("activce");
+				$(".menu ul li").eq(index).addClass("active");
+			}		
+		})	
 	</script>
