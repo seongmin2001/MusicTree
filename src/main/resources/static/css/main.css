@@ -116,8 +116,16 @@ body{
 	text-align: center;
 }
 
+.menu > ul > li:active{
+	border-bottom: 3px solid #29602b;
+}
+
 .menu > ul > li:hover{
 	border-bottom: 3px solid #29602b;
+}
+
+.menu > ul > li:hover > ul{
+	display: block;
 }
 
 .menu > ul > li > span{
@@ -127,9 +135,7 @@ body{
 
 .Mmenu{
 	position: absolute;
-	left: 315px;
-	width: 161px;
-	height: 164px;
+	width: 161px;;
 	border: 1px solid #f1f1f1;
 	background-color: #ffffff;
 	z-index: 100;
@@ -148,7 +154,7 @@ body{
 	font-weight: bold;
 	color: #111111;
 	cursor: pointer;
-	margin: 15px 0;
+	margin: 30px 0;
 }
 
 .Mmenu ul li:hover{
@@ -157,16 +163,22 @@ body{
 }
 
 .rlist{
+	top: 99px;
+	width: 126px;
 	left: 319px;
 	height: 164px;
 }
 
 .glist{
+	top: 99px;
+	width: 126px;
 	left: 559px;
 	height: 313px;
 }
 
 .playlist{
+	top: 99px;
+	width: 126px;
 	left: 799px;
 	height: 122px;
 }
@@ -198,16 +210,20 @@ body{
 	display: inline-block;
 	width: 300px;
 	height: 300px;
+	margin: 0 10px;
 }
 
-.content .MusicBox .SlideBox .Music_item > img{
+.content .MusicBox .SlideBox .Music_item img{
 	width: 300px;
 	height: 300px;	
 }
 
 .content .MusicBox .SlideBox .Music_item .MusicInfo{
+	position: absolute;
+	bottom: 0;
 	width: 300px;
 	height: 72px;
+	
 	background-color: rgba(58, 58, 58, 0.8);	
 }
 
@@ -270,8 +286,9 @@ body{
 }
 .content .banner{
 	width: 1280px;
-	margin-top: 136px;
+	margin: 136px 0;
 	overflow-x: hidden;
+	position: relative;
 }
 .content .banner .bannerItem{
 	width: 1280px;
@@ -281,11 +298,15 @@ body{
 		
 }
 
+.swiper-pagination{
+	position: absolute;
+}
+
 .swiper-pagination-bullet{
 	width: 14px;
 	height: 14px;
 	border: 2px solid #29602b;
-	color: transparent;
+	background-color: transparent;
 	opacity: 1;
 }
 
@@ -313,6 +334,10 @@ body{
 	margin-top: 3px;
 	cursor: pointer;
 }
+.content .chartBox .moreBtn img{
+	width: 9px;
+	height:13px;
+}
 
 .content .chartBox .musicTitle{
 	font-size: 16px;
@@ -335,7 +360,7 @@ body{
 
 .content .chartBox .musicChart .chartlist .listItem{
 	display: grid;
-	grid-template-columns: 1fr 10fr 3fr 1fr;
+	grid-template-columns: 1fr 10fr 5fr 1fr;
 	border-bottom: 1px solid #eeeeee;
 	padding: 17px 0;
 }
@@ -347,8 +372,6 @@ body{
 }
 
 .content .chartBox .musicChart .chartlist .listItem .musicTitle{
-	font-size: 16px;
-	color: #000000;
 	margin-top: 2px;
 }
 .content .chartBox .musicChart .chartlist .listItem .singer{
@@ -518,4 +541,171 @@ body{
 	margin-top: -60px;
 	background-image: url('../../static/img/MusicTree_logo_big@2x.png');
 	background-size: contain;
+}
+
+
+/* musicChart css */
+.Mcontent{
+	width: 1280px;
+	margin: 0 auto;
+	padding: 40px 0 150px;
+}
+
+.Mcontent .title{
+	font-size: 24px;
+	color: #111111;
+	line-height: 0.9;
+	font-weight: bold;
+}
+
+.Mcontent .date{
+	text-align: center;
+	font-size: 20px;
+}
+
+.Mcontent .date span{
+	color: #29602b;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.Mcontent .btns{
+	text-align: right;
+	margin-top: 10px;
+}
+.Mcontent .btns img{
+	height: 30px;
+	cursor: pointer;
+}
+
+.Mcontent .musicChart{
+	margin-top: 20px;
+}
+.Mcontent .musicChart .chartTop{
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	padding: 15px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 15fr 1fr 1fr;
+}
+
+.Mcontent .musicChart .chartTop div{
+	font-size: 16px;
+	text-align: center;
+	color: #000000;
+}
+.Mcontent .musicChart .chartlist{
+	display: table;
+}
+
+.Mcontent .musicChart .chartTop .listItem{
+	padding: 10px;
+	border-bottom: 1px solid #eeeeee;
+	display: table-row;
+	height: 80px;
+}
+
+.Mcontent .musicChart .chartTop .listItem div{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 67px;
+}
+
+.Mcontent .musicChart .chartlist .listItem{
+	padding: 10px;
+	display: table-row;
+	height: 80px;
+}
+
+.Mcontent .musicChart .chartlist .listItem div{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 67px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+
+.Mcontent .musicChart .chartlist .listItem .rank{
+	font-size: 20px;
+	font-weight: bold;
+}
+.Mcontent .musicChart .chartlist .listItem .musicCover{
+	width: 60px;
+	height: 60px;
+}
+.Mcontent .musicChart .chartlist .listItem .title{
+	font-size: 16px;
+	width: 350px;
+	text-align: left;
+}
+.Mcontent .musicChart .chartlist .listItem .singer{
+	font-size: 16px;
+	color: #929292;
+	width: 500px;
+	text-align: left;
+}
+.Mcontent .musicChart .chartlist .listItem .playBtn, .Mcontent .musicChart .chartlist .listItem .addBtn {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.Mcontent .loading{
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 50px auto;
+} 
+
+.Mcontent .position{
+	color: #848484;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.Mcontent .albumChart{
+	margin-top: 100px;
+}
+
+.Mcontent .albumChart .chartlist .listItem{
+	width: 600px;
+	height: 160px;
+	border: 1px solid #eeeeee;
+	display: inline-block;
+	margin: 0 70px 20px 0;
+}
+
+.Mcontent .albumChart .chartlist .listItem:nth-child(2n - 1){
+	margin-right: 0;
+}
+
+.Mcontent .albumChart .chartlist .listItem .albumImg{
+		width: 160px;
+	height: 160px;
+	float: left;
+	margin-right: 22px;
+}
+.Mcontent .albumChart .chartlist .listItem .albumImg img{
+	width: 160px;
+	height: 160px;
+}
+.Mcontent .albumChart .chartlist .listItem .albumInfo{
+	float: left;
+	padding-top: 22px;
+}
+.Mcontent .albumChart .chartlist .listItem .albumInfo .musicTitle{
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+.Mcontent .albumChart .chartlist .listItem .albumInfo .singer{
+	font-size: 14px;
+	color: #929292;
+	margin-bottom: 30px;
+}
+.Mcontent .albumChart .chartlist .listItem .albumInfo .playBtn{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
 }
