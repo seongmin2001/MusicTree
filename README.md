@@ -6,7 +6,7 @@
 -------
 
 ## **사용기술**
-<img src="https://img.shields.io/badge/Spring Boot-6dB33F?style="for-the-badge&logo-SpringBoot&logoColor-white">
+<img src="https://img.shields.io/badge/Spring Boot-6dB33F?" style="for-the-badge&logo-SpringBoot&logoColor-white">
 <img src="https://img.shields.io/badge/html-e34f26?style="for-the-badge&logo-html5&logoColor-white">
 <img src="https://img.shields.io/badge/css-1572b6?style="for-the-badge&logo-css&logoColor-white">
 <img src="https://img.shields.io/badge/jQuery-0769ad?style="for-the-badge&logo-jQuery&logoColor-white">
