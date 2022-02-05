@@ -131,4 +131,27 @@ function getChart(){
 		}
 	})
 }
+
+function getVideo(){
+	
+	$(".loading").hide();
+	for(var i = 0; i < 12; i++){
+		var html = '';
+		
+		html += '<div class="listItem">';
+		
+		if(i%3 == 0){
+			html += '<iframe src="https://www.youtube.com/embed/WZkviMHXoTI"><iframe></div>';	
+		}else if(i%3 == 1){
+			html += '<iframe src="https://www.youtube.com/embed/1YePPvBW96s"><iframe></div>';
+		}
+		else{
+			html += '<iframe src="https://www.youtube.com/embed/1YePPvBW96s"><iframe></div>';
+		}
+		
+		
+		
+		$(".VideoChart .chartlist").append(html);
+	}
+}
  
