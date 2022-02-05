@@ -54,18 +54,44 @@
 		</ul>
 	</div>
 	
+
+	
 	<div style="width: 100%; height: 1px; background-color: #eeeeee;"></div>
+	
+	<div class="topBtn" onclick="goTop();">
+		<img src="${path }/static/img/up-arrow.png"/>
+		TOP
+	</div>
 	
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
 	<script>
 		 $(document).ready(function(){
-			console.log(window.location.pathname);
+			 
+			 if($(window).scrollTop() > 700){
+				 $(".topBtn").show();
+			 }
+			 
+			$(function(){
+				$(window).scroll(function(){
+					if($(this).scrollTop() > 700){
+						$(".topBtn").fadeIn(300);
+					}else{
+						$(".topBtn").fadeOut(300);
+					}
+				})
+			})
 			
 			var path = window.location.pathname.split('/')[1];
 			
 			if(path != ''){
 				$(".menu ul li").removeClass("activce");
 				$(".menu ul li").eq(index).addClass("active");
-			}		
+			}
 		})	
+		
+		function goTop(){
+			$('html, body').animate({
+				scrollTop: 0
+			}, 700);
+		 }
 	</script>

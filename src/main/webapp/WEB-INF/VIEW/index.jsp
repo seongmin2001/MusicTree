@@ -7,6 +7,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>MusicTree</title>
+	
+	<link rel="icon" href="${path }/static/img/favicon.ico" type="image/x-icon"/>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -16,6 +18,9 @@
 </head>
 <body>
 	<c:import url="./Top.jsp"/>
+	
+
+	
 	<div class="content">
 		<div class="MusicBox">
 			<div class="C_title">최신음악</div>
